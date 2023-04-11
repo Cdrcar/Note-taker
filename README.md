@@ -12,7 +12,7 @@ This application uses an Express.js back end and saves and retrieve note data fr
 
   ## [Description](#table-of-contents)
 
-Note Taker application that can be used to write and save notes.  
+Note Taker application that can be used to write and save notes using Express.js and retrieving data from JSON file.  
 `Technologies used:`
 
 - HTML5  
