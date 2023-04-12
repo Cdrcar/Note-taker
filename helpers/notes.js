@@ -24,3 +24,19 @@ function deleteFromDb(id, arrayOfNotes) {
   }
 };
 
+// Create function to add new notes to the database file db.js
+function addToDb (body, arrayOfNotes) {
+    const newNote = body;
+    // Add new note to the array of notes
+    arrayOfNotes.push(newNote);
+    // Write the updated array of notes passing 2 parameters: the path to the file to update and data to write to db.js
+    fs.writeFileSync(
+        path.join(__direname, "db/db.json"),
+        JSON.stringify({notes: arrayOfNotes}, 2)
+    );
+    // Return the new note
+    return newNote;
+};
+
+// Export functions
+module.exports = {deleteFromDb, addToDb }
