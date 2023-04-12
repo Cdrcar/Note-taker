@@ -4,7 +4,7 @@ const path = require("path");
 
 // Create function to delete notes from database file db.js
 function deleteFromDb(id, arrayOfNotes) {
-  deleteNote = id;
+  const deleteNote = id;
   // Loop through the array of notes
   for (let i = 0; i < arrayOfNotes.length; i++) {
     // If the id id the array of notes matches the delete note, use splice() method to remove the matching note
@@ -39,6 +39,5 @@ function addToDb (body, arrayOfNotes) {
 };
 
 
-
 // Export functions
-module.exports = {deleteFromDb, addToDb }
+module.exports = { deleteFromDb, addToDb }

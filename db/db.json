@@ -2,14 +2,14 @@
     "notes": [
         {
             "title": "Fist Note",
-            "text": "Text",
-            "id": " "
+            "text": "Text"
+            
         },
 
         {
             "title": "Second Note",
-            "text": "Text",
-            "id": " "
+            "text": "Text"
+            
         }
     ]
 }
