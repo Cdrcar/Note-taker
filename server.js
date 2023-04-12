@@ -1,13 +1,11 @@
 // Require Express package and files
 const express = require("express");
-const apiRoute = require('./routes/apiRoute');
-const htmlRoute = require('./routes/htmlRoute');
-
-// Listen to PORT (port not set in the enviroment so app will  listen to 3001)
-const PORT = process.env.PORT || 3001;
-
 // New instance of express app
 const app = express();
+// Listen to PORT (port not set in the enviroment so app will  listen to 3001)
+const PORT = process.env.PORT || 3001;
+const apiRoute = require('./routes/apiRoute/api');
+const htmlRoute = require('./routes/htmlRoute/html');
 
 
 // Middlewares using app.use() method
