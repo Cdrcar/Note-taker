@@ -1,9 +1,9 @@
-// Require packages and files
+// Require Express package and files
 const express = require("express");
 const apiRoute = require('./routes/apiRoute');
 const htmlRoute = require('./routes/htmlRoute');
 
-// Listen to PORT (port not sert in the enviroment so app will  listen to 3001)
+// Listen to PORT (port not set in the enviroment so app will  listen to 3001)
 const PORT = process.env.PORT || 3001;
 
 // New instance of express app
@@ -21,6 +21,7 @@ app.use(express.urlencoded ({ extended:true } ));
 app.use('/api', apiRoute);
 app.use("/", htmlRoute);
 
+// Start the server listening on port 3001
 app.listen(PORT, () => {
     console.log(`🚀 App listening at http://localhost:${PORT} 🚀`)
 } )
