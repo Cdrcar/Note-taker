@@ -20,7 +20,7 @@ app.use(express.json);
 
 //Routing for the two endpoints /api and /
 app.use('/api', apiRoute);
-app.use("/", htmlRoute);
+app.use('/', htmlRoute);
 
 // Start the server listening on port 3001
 app.listen(PORT, () => {

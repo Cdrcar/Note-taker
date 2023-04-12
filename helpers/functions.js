@@ -39,5 +39,6 @@ function addToDb (body, arrayOfNotes) {
 };
 
 
+
 // Export functions
-module.exports = { deleteFromDb, addToDb }
+module.exports = {deleteFromDb, addToDb }
