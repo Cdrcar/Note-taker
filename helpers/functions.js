@@ -3,7 +3,7 @@ const fs = require("fs");
 const path = require("path");
 
 // Create function to delete notes from database file db.js
-async function deleteFromDb(id, arrayOfNotes) {
+function deleteFromDb(id, arrayOfNotes) {
   const deleteNote = id;
   // Loop through the array of notes
   for (let i = 0; i < arrayOfNotes.length; i++) {
@@ -11,37 +11,31 @@ async function deleteFromDb(id, arrayOfNotes) {
     if (deleteNote === arrayOfNotes[i].id) {
       arrayOfNotes.splice(i, 1);
       // Update array of notes passing parameters: the path to the file to update, data to write to db.js
-      try {
-        await fs.writeFile(
-        path.join(__dirname, "db/db.json"),
-        JSON.stringify({ notes: arrayOfNotes }, 2)
-        );
-        // hanldle erros
-      } catch (err) {
-        throw err;
-      }
+      fs.writeFileSync(
+        path.join(__dirname, "../db/db.json"),
+        JSON.stringify({notes: arrayOfNotes}, null, 2), err => {
+          //Handle errors
+          if (err) {
+            throw err;
+          }
+        });
     }
   }
-}
+};
 
 // Create function to add new notes to the database file db.js
-async function addToDb (body, arrayOfNotes) {
+    function addToDb (body, arrayOfNotes) {
     const newNote = body;
     // Add new note to the array of notes
     arrayOfNotes.push(newNote);
     // Write the updated array of notes passing 2 parameters: the path to the file to update and data to write to db.js
-    try {
-      await fs.writeFile(
-        path.join(__dirname, "db/db.json"),
-        JSON.stringify({notes: arrayOfNotes}, 2)
+    fs.writeFileSync(
+      path.join(__dirname, "../db/db.json"),
+      JSON.stringify({notes: arrayOfNotes}, null, 2)
     );
-    // Return the new note
     return newNote;
-} catch (err) {
-  throw err;
-}
-};
+  };
 
 
 // Export functions
-module.exports = {deleteFromDb, addToDb }
+module.exports = { deleteFromDb, addToDb }
