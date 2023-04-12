@@ -12,7 +12,7 @@ const app = express();
 
 // Middlewares using app.use() method
 
-// Serve static file from the public directory
+//For each file in that directory, the server creates a route with the file's name as the path
 app.use(express.static('public'));
 // Middleware for parsing incoming JSON and urlencoded form data
 app.use(express.urlencoded ({ extended:true } ));
