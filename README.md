@@ -1,5 +1,5 @@
 # Note taker 📝
-This application uses an Express.js back end and saves and retrieve note data from a JSON file.
+This application uses an Express.js back-end and saves and retrieves notes data from a JSON file.
   ## [Table of Contents](#table-of-contents)
 
   - [Description](#description)

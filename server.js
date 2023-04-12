@@ -14,8 +14,9 @@ const app = express();
 
 // Serve static file from the public directory
 app.use(express.static('public'));
-// Middleware for parsing JSON and urlencoded form data
+// Middleware for parsing incoming JSON and urlencoded form data
 app.use(express.urlencoded ({ extended:true } ));
+app.use(express.json);
 
 //Routing for the two endpoints /api and /
 app.use('/api', apiRoute);
@@ -23,5 +24,5 @@ app.use("/", htmlRoute);
 
 // Start the server listening on port 3001
 app.listen(PORT, () => {
-    console.log(`🚀 App listening at http://localhost:${PORT} 🚀`)
+    console.log(`🔉 App listening at http://localhost:${PORT} 🔉`)
 } )
