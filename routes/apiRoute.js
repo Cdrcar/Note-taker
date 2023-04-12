@@ -5,12 +5,12 @@ const { notes } = require("../db/db.json");
 const {deleteFromDb, addToDb} = require('../helpers/functions');
 
 // Show notes from db.json as a json response to client side
-router.get('/notes', (req, res) => {
+router.get("/notes", (req, res) => {
     res.json({notes})
 })
 
 // Create new note that is pushed to the array of notes (db.json), create random id, 
-router.post('/notes', (req, res) => {
+router.post("/notes", (req, res) => {
     // Generate unique id using uuidv4() and assign it to the id of the body of the request received
     req.body.id = uuidv4();
     // Create new note using the addToDb function that takes the body of the request and adds it to the db.json files
