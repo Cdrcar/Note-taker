@@ -1,6 +1,15 @@
-[
-    {
-        "title":"Test Title",
-        "text":"Test text"
-    }
-]
+{
+    "notes": [
+        {
+            "title": "Fist Note",
+            "text": "Text",
+            "id": " "
+        },
+
+        {
+            "title": "Fist Note",
+            "text": "Text",
+            "id": " "
+        }
+    ]
+}
