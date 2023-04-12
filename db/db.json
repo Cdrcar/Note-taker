@@ -2,14 +2,8 @@
     "notes": [
         {
             "title": "Fist Note",
-            "text": "Text"
-            
-        },
-
-        {
-            "title": "Second Note",
-            "text": "Text"
-            
+            "text": "Text",
+            "id": "82a85488-cb71-43c9-b22b-0976ca7f5a23"      
         }
     ]
 }
