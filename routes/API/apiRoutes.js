@@ -1,8 +1,9 @@
 // Require express router, uuid and custom modules notes, deleteFromDb and addToDb
 const router = require('express').Router();
+const {addToDb, deleteFromDb} = require('../../helpers/functions');
 const { v4: uuidv4 } = require('uuid');
 const { notes } = require("../../db/db.json");
-const {addToDb, deleteFromDb} = require('../../helpers/functions');
+
 
 // Show notes from db.json as a json response to client side
 router.get("/notes", (req, res) => {
