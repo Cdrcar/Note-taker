@@ -25,12 +25,13 @@ Note Taker application that can be used to write and save notes using Express.js
 - Uniqid
 
   ## [Deployment](#table-of-contents)
-  [Link to Heroku Deployment]()
+  [Link to Heroku Deployment](https://memotaker.herokuapp.com/)
 
 
   ## [Final Result](#table-of-contents)
 
-  ![]()
+  ![homepage](./assets/homepage.png)
+  ![notes](./assets/notes.png)
 
 
   ## [Installation](#table-of-contents)
@@ -40,6 +41,8 @@ Note Taker application that can be used to write and save notes using Express.js
   > package.json: npm init -y   
 
   > express.js: npm i express
+
+  > uuid: npm install uuid
 
 
   ## [Usage](#table-of-contents)
